@@ -7,6 +7,8 @@ WORKDIR /app
 # 3. Copiamos todo el proyecto
 COPY . .
 
+RUN chmod +x mvnw
+
 # 4. Construimos el JAR
 RUN ./mvnw clean package -DskipTests
 
